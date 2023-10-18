@@ -6,7 +6,7 @@
       "command": "/usr/bin/g++",
       "args": [
         "-fdiagnostics-color=always",
-        "--std=c++20",
+        "--std=c++17",
         "-g",
         "-ggdb", // for debug build
         // "-O2", // for release build
@@ -19,6 +19,7 @@
         "-Wsign-conversion", // increase number of warnings
         "-Werror", // treat all warnings as errors
         "${fileDirname}/*.cpp", // compiles all files in firedir
+        "-I'${workspaceFolder}/libraries/plog-master/include'",
         // "${file}",
         "-o",
         "${fileDirname}/${fileBasenameNoExtension}"
